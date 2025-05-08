@@ -12,7 +12,6 @@ namespace al
 
     LogCapture::~LogCapture()
     {
-        m_Stream << '\n';
         Logger::PushMessage(m_Level, std::move(m_Timestamp), std::move(m_Location), std::move(m_Stream.str()), std::move(m_LogStream));
     }
 }
